@@ -4,10 +4,7 @@ const lowerCaseWords = (mixArray) => {
         for (item of mixArray) {
             if(typeof item == "string") {
                 wordsArray.push(item.toLowerCase());
-                resolve("It is the string");
-            }
-            else {
-                reject("It is not string");
+                resolve(wordsArray);
             }
         }
     })
@@ -18,6 +15,6 @@ const lowerCaseWords = (mixArray) => {
     })
     return wordsArray;
 }
-const mixArray = ['PIZZA', true, 10, 23, 'Wings'];
+const mixArray = [1,2,3, true, "Hello", "World"];
 
 console.log(lowerCaseWords(mixArray));
